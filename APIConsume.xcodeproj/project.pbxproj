@@ -94,6 +94,8 @@
 		FEB596A32B275E9200413C72 /* APIConsume */ = {
 			isa = PBXGroup;
 			children = (
+				FEB596CF2B27608100413C72 /* API */,
+				FEB596CE2B27604B00413C72 /* Model */,
 				FEB596A42B275E9200413C72 /* APIConsumeApp.swift */,
 				FEB596A62B275E9200413C72 /* ContentView.swift */,
 				FEB596A82B275E9300413C72 /* Assets.xcassets */,
@@ -125,6 +127,20 @@
 				FEB596C12B275E9300413C72 /* APIConsumeUITestsLaunchTests.swift */,
 			);
 			path = APIConsumeUITests;
+			sourceTree = "<group>";
+		};
+		FEB596CE2B27604B00413C72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FEB596CF2B27608100413C72 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
