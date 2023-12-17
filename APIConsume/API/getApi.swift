@@ -1,18 +1,11 @@
-//
-//  getApi.swift
-//  APIConsume
-//
-//  Created by Andreas Antonsson on 2023-12-17.
-//
-
 import Foundation
 
 class OldTimeStrongViewModel: ObservableObject {
     
     @Published var name: String?
-    @Published var reps: Int?
-    @Published var sets: Int?
-    @Published var exercises: [String] = []
+    @Published var date: String?
+    @Published var description: String?
+    @Published var exercises: [OldTimeStrong.Exercises] = []
     
     func fetchData() {
         let baseURL = "http://localhost:3000"
@@ -25,11 +18,15 @@ class OldTimeStrongViewModel: ObservableObject {
                     if let decodedResponse = try? JSONDecoder().decode(OldTimeStrong.self, from: data) {
                         DispatchQueue.main.async {
                             self.name = decodedResponse.name
-                            self.reps = decodedResponse.reps
-                            self.sets = decodedResponse.sets
-                            self.exercises = decodedResponse.exercises
+                            self.date = decodedResponse.date
+                            self.description = decodedResponse.description
                             
-                
+                            // Generate unique identifiers for exercises
+                            self.exercises = decodedResponse.exercises.enumerated().map { index, exercise in
+                                var mutableExercise = exercise
+                                mutableExercise.id = UUID()
+                                return mutableExercise
+                            }
                         }
                     }
                 }
@@ -39,12 +36,16 @@ class OldTimeStrongViewModel: ObservableObject {
     
     struct OldTimeStrong: Decodable {
         let name: String
-        let reps: Int
-        let sets: Int
-        let exercises: [String]
+        let date: String
+        let description: String
+        let exercises: [Exercises]
         
-    /*    struct Exercises: Decodable {
-        let exercise: String
-        } */
+        struct Exercises: Identifiable, Decodable {
+            var id: UUID?
+            let name: String
+            let weight: [Int]
+            let reps: [Int]
+            let sets: [Int]
+        }
     }
 }
