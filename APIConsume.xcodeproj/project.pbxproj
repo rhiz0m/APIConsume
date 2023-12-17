@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE4220442B2F10A100119236 /* getApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4220432B2F10A100119236 /* getApi.swift */; };
 		FEB596A52B275E9200413C72 /* APIConsumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596A42B275E9200413C72 /* APIConsumeApp.swift */; };
 		FEB596A72B275E9200413C72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596A62B275E9200413C72 /* ContentView.swift */; };
 		FEB596A92B275E9300413C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB596A82B275E9300413C72 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE4220432B2F10A100119236 /* getApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getApi.swift; sourceTree = "<group>"; };
 		FEB596A12B275E9200413C72 /* APIConsume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIConsume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB596A42B275E9200413C72 /* APIConsumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConsumeApp.swift; sourceTree = "<group>"; };
 		FEB596A62B275E9200413C72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		FEB596CF2B27608100413C72 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FE4220432B2F10A100119236 /* getApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				FEB596A72B275E9200413C72 /* ContentView.swift in Sources */,
 				FEB596A52B275E9200413C72 /* APIConsumeApp.swift in Sources */,
+				FE4220442B2F10A100119236 /* getApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

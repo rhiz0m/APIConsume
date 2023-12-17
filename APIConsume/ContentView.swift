@@ -8,32 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = OldTimeStrongViewModel()
     @State private var apiResponse: String = "Loading..."
-    private let baseURL = "http://localhost:3000/"
-    private let testEndpoint = "test"
-    
-    var body: some View {
-        Text(apiResponse)
-            .onAppear {
-                fetchData()
-            }
-    }
 
-    func fetchData() {
-        
-        // Make a GET request to Express API
-        if let url = URL(string: baseURL+testEndpoint) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data {
-                    if let apiResponse = String(data: data, encoding: .utf8) {
-                        // Update the UI on the main thread
-                        DispatchQueue.main.async {
-                            self.apiResponse = apiResponse
-                        }
-                    }
-                }
-            }.resume()
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Name: \(viewModel.name ?? "")")
+            Text("Reps: \(viewModel.reps ?? 0)")
+            Text("Sets: \(viewModel.sets ?? 0)")
+            Text("Exercises: \(viewModel.exercises.joined(separator: ", "))")
         }
+        .onAppear {
+                viewModel.fetchData()
+            }
     }
 }
 
