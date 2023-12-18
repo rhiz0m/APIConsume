@@ -9,10 +9,13 @@ class OldTimeStrongViewModel: ObservableObject {
     
     func fetchData() {
         let baseURL = "http://localhost:3000"
-        let oldTimeStrongEndpoint = "/oldtimestrong"
+        let oldTimeStrong = "/oldtimestrong"
+        let gripStrength = "/gripstrength"
+        let stoneStrength = "/stonestrength"
+        let armWrestling = "/armwrestling"
         
         // Making a GET request to Express API
-        if let url = URL(string: baseURL + oldTimeStrongEndpoint) {
+        if let url = URL(string: baseURL + stoneStrength) {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data {
                     if let decodedResponse = try? JSONDecoder().decode(OldTimeStrong.self, from: data) {
