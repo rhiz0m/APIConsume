@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE4220442B2F10A100119236 /* getApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4220432B2F10A100119236 /* getApi.swift */; };
+		FE4220442B2F10A100119236 /* OTStrongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4220432B2F10A100119236 /* OTStrongViewModel.swift */; };
 		FEB596A52B275E9200413C72 /* APIConsumeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596A42B275E9200413C72 /* APIConsumeApp.swift */; };
 		FEB596A72B275E9200413C72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596A62B275E9200413C72 /* ContentView.swift */; };
 		FEB596A92B275E9300413C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB596A82B275E9300413C72 /* Assets.xcassets */; };
@@ -15,6 +15,10 @@
 		FEB596B62B275E9300413C72 /* APIConsumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596B52B275E9300413C72 /* APIConsumeTests.swift */; };
 		FEB596C02B275E9300413C72 /* APIConsumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596BF2B275E9300413C72 /* APIConsumeUITests.swift */; };
 		FEB596C22B275E9300413C72 /* APIConsumeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB596C12B275E9300413C72 /* APIConsumeUITestsLaunchTests.swift */; };
+		FEF1910C2B31F7A700F1A4C0 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF1910B2B31F7A700F1A4C0 /* EndPoints.swift */; };
+		FEF1910F2B31FE6B00F1A4C0 /* CRUDBtns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF1910E2B31FE6B00F1A4C0 /* CRUDBtns.swift */; };
+		FEF191112B31FF2400F1A4C0 /* EndpointBtns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF191102B31FF2400F1A4C0 /* EndpointBtns.swift */; };
+		FEF191132B31FF8800F1A4C0 /* APIResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF191122B31FF8800F1A4C0 /* APIResponseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FE4220432B2F10A100119236 /* getApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getApi.swift; sourceTree = "<group>"; };
+		FE4220432B2F10A100119236 /* OTStrongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTStrongViewModel.swift; sourceTree = "<group>"; };
 		FEB596A12B275E9200413C72 /* APIConsume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIConsume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB596A42B275E9200413C72 /* APIConsumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConsumeApp.swift; sourceTree = "<group>"; };
 		FEB596A62B275E9200413C72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,10 @@
 		FEB596BB2B275E9300413C72 /* APIConsumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIConsumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB596BF2B275E9300413C72 /* APIConsumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConsumeUITests.swift; sourceTree = "<group>"; };
 		FEB596C12B275E9300413C72 /* APIConsumeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConsumeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FEF1910B2B31F7A700F1A4C0 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		FEF1910E2B31FE6B00F1A4C0 /* CRUDBtns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDBtns.swift; sourceTree = "<group>"; };
+		FEF191102B31FF2400F1A4C0 /* EndpointBtns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBtns.swift; sourceTree = "<group>"; };
+		FEF191122B31FF8800F1A4C0 /* APIResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +104,8 @@
 		FEB596A32B275E9200413C72 /* APIConsume */ = {
 			isa = PBXGroup;
 			children = (
-				FEB596CF2B27608100413C72 /* API */,
+				FEF1910D2B31FDA500F1A4C0 /* Views */,
+				FEB596CF2B27608100413C72 /* ViewModel */,
 				FEB596CE2B27604B00413C72 /* Model */,
 				FEB596A42B275E9200413C72 /* APIConsumeApp.swift */,
 				FEB596A62B275E9200413C72 /* ContentView.swift */,
@@ -134,16 +143,27 @@
 		FEB596CE2B27604B00413C72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEF1910B2B31F7A700F1A4C0 /* EndPoints.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FEB596CF2B27608100413C72 /* API */ = {
+		FEB596CF2B27608100413C72 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FE4220432B2F10A100119236 /* getApi.swift */,
+				FE4220432B2F10A100119236 /* OTStrongViewModel.swift */,
 			);
-			path = API;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEF1910D2B31FDA500F1A4C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FEF1910E2B31FE6B00F1A4C0 /* CRUDBtns.swift */,
+				FEF191102B31FF2400F1A4C0 /* EndpointBtns.swift */,
+				FEF191122B31FF8800F1A4C0 /* APIResponseView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +298,11 @@
 			files = (
 				FEB596A72B275E9200413C72 /* ContentView.swift in Sources */,
 				FEB596A52B275E9200413C72 /* APIConsumeApp.swift in Sources */,
-				FE4220442B2F10A100119236 /* getApi.swift in Sources */,
+				FEF1910F2B31FE6B00F1A4C0 /* CRUDBtns.swift in Sources */,
+				FEF191132B31FF8800F1A4C0 /* APIResponseView.swift in Sources */,
+				FEF191112B31FF2400F1A4C0 /* EndpointBtns.swift in Sources */,
+				FEF1910C2B31F7A700F1A4C0 /* EndPoints.swift in Sources */,
+				FE4220442B2F10A100119236 /* OTStrongViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
