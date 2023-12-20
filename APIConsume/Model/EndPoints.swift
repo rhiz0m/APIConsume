@@ -10,6 +10,6 @@ import Foundation
 struct EndPoints {
     let stoneStrength = "/stonestrength"
     let gripStrength = "/gripstrength"
-    let otStrongMan = "/oldtimestrong"
+    let otStrongMan = "/otstrong"
     let armWrestling = "/armwrestling"
 }

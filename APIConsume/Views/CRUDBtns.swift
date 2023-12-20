@@ -32,8 +32,9 @@ struct CRUDBtns: View {
             }, label: {
                 Text("Delete")
             })
-
         }
+        .opacity(viewModel.rateLimitStatus == nil ? 1.0 : 0.0)
+        .disabled(viewModel.rateLimitStatus != nil)
     }
 }
 
