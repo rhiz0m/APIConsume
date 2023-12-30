@@ -61,13 +61,13 @@ class OTStrongViewModel: ObservableObject {
     
     func createApi(completion: @escaping () -> Void) {
         guard let baseURL = URL(string: "http://localhost:3000"),
-              let name = title,
-              let date = muscleGroups,
-              let description = equipment else {
+              let title = title,
+              let muscleGroups = muscleGroups,
+              let equipment = equipment else {
             return
         }
         
-        let createURL = baseURL.appendingPathComponent("/oldtimestrong")
+        let createURL = baseURL.appendingPathComponent("/otstrong")
         
         let exerciseUpdates: [UpdateRequest.ExerciseUpdate] = exercises.map {
             UpdateRequest.ExerciseUpdate(
@@ -79,7 +79,7 @@ class OTStrongViewModel: ObservableObject {
         }
         
         let createRequest = UpdateRequest(
-            title: title,
+            title: title ?? "DefaultTitle",
             muscleGroups: muscleGroups,
             equipment: equipment,
             exercises: exerciseUpdates
@@ -120,7 +120,7 @@ class OTStrongViewModel: ObservableObject {
             return
         }
         
-        let updateURL = baseURL.appendingPathComponent("/oldtimestrong/\(name)")
+        let updateURL = baseURL.appendingPathComponent("/otstrong/\(name)")
         
         let exerciseUpdates: [UpdateRequest.ExerciseUpdate] = exercises.map {
             UpdateRequest.ExerciseUpdate(
@@ -132,7 +132,7 @@ class OTStrongViewModel: ObservableObject {
         }
         
         let updateRequest = UpdateRequest(
-            title: title,
+            title: title ?? "DefaultTitle",
             muscleGroups: muscleGroups,
             equipment: equipment,
             exercises: exerciseUpdates
@@ -169,7 +169,7 @@ class OTStrongViewModel: ObservableObject {
             return
         }
         
-        let deleteURL = baseURL.appendingPathComponent("/oldtimestrong/\(name)")
+        let deleteURL = baseURL.appendingPathComponent("/otstrong/\(name)")
         
         var request = URLRequest(url: deleteURL)
         request.httpMethod = "DELETE"
@@ -210,7 +210,7 @@ class OTStrongViewModel: ObservableObject {
     }
     
     struct UpdateRequest: Encodable {
-        let title: String?
+        let title: String
         let muscleGroups: [String]?
         let equipment: [String]?
         let exercises: [ExerciseUpdate]
